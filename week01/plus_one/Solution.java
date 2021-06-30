@@ -1,3 +1,4 @@
+
 class Solution {
     public int[] plusOne(int[] digits) {
         int val = digits[digits.length - 1];
@@ -5,6 +6,7 @@ class Solution {
             digits[digits.length - 1] = val + 1;
             return digits;
         }
+        //从后向前遍历，只要不是9就加1，遇到9特殊处理
         for (int i = digits.length - 1; i>=0; i--) {
             if (digits[i] == 9) {
                 digits[i] = 0;
